@@ -1328,3 +1328,117 @@
   .learning__deco--cloud { width: 100px; }
   .cmodal__cert, .cmodal__cert--landscape { max-width: 100%; max-height: none; }
 }
+
+/* ============================================================
+   Hamburger button — hidden on desktop
+   ============================================================ */
+.nav-hamburger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  width: 40px; height: 40px; border-radius: var(--radius-md);
+  border: 1.5px solid rgba(166, 216, 245, 0.5);
+  background: var(--gradient-frame);
+  cursor: pointer; padding: 0;
+  transition: background var(--dur-micro) var(--ease-out-soft),
+              border-color var(--dur-micro) var(--ease-out-soft);
+}
+.nav-hamburger:hover { background: var(--gradient-frame-strong); border-color: var(--sky-300); }
+.nav-hamburger span {
+  display: block; width: 18px; height: 2px; border-radius: 2px;
+  background: var(--sky-700);
+  transition: transform 0.25s var(--ease-out-soft), opacity 0.2s;
+}
+.nav-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-overlay {
+  position: fixed; inset: 0; z-index: 40;
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.portfolio-nav__cta--desktop { display: inline-flex; }
+.portfolio-nav__mobile-cta  { display: none; }
+
+/* ============================================================
+   Mobile — 640px (small tablets + large phones)
+   ============================================================ */
+@media (max-width: 640px) {
+  .nav-hamburger { display: flex; }
+  .portfolio-nav__cta--desktop { display: none; }
+  .portfolio-nav__mobile-cta  { display: list-item; margin-top: 8px; }
+
+  .portfolio-nav__links {
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 45;
+    flex-direction: column; gap: 0;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgba(166, 216, 245, 0.35);
+    box-shadow: var(--shadow-lift);
+    padding: 12px 24px 20px;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s var(--ease-out-soft), padding 0.3s var(--ease-out-soft);
+  }
+  .menu-open .portfolio-nav__links {
+    max-height: 420px;
+    padding: 16px 24px 24px;
+  }
+  .portfolio-nav__links li { border-bottom: 1px solid rgba(166, 216, 245, 0.2); }
+  .portfolio-nav__links li:last-child { border-bottom: none; }
+  .portfolio-nav__links a {
+    display: block; padding: 12px 0;
+    font-size: 16px;
+  }
+  .portfolio-nav__links a::after { display: none; }
+  .portfolio-nav__mobile-cta { padding-top: 12px; }
+  .portfolio-nav__mobile-cta .portfolio-nav__cta {
+    width: 100%; justify-content: center; font-size: 15px; padding: 12px;
+  }
+  .portfolio-nav__inner { padding: 14px 20px; }
+  .portfolio-brand__wd { font-size: 16px; }
+
+  /* Hero */
+  .hero { padding: 48px 20px 60px; }
+  .hero__name { font-size: 36px; }
+  .hero__name-en { font-size: 16px; }
+  .hero__title-strong, .hero__title-sep { font-size: 16px; }
+  .hero__pitch { font-size: 14.5px; }
+  .hero__actions { flex-direction: column; gap: 10px; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  .hero__certs { gap: 6px; }
+
+  /* About */
+  .about { padding: var(--space-8) 20px; border-radius: 20px; margin-top: 20px; margin-bottom: 20px; }
+
+  /* Sections general */
+  .section__head h2 { font-size: 26px; }
+  .section__head-en { font-size: 14px; }
+
+  /* Projects */
+  .projects { padding: var(--space-8) 20px; }
+  .pmodal__panel { padding: 24px 18px 60px; border-radius: 20px 20px 0 0; }
+  .pmodal__tagrow { padding-right: 0; flex-wrap: wrap; }
+
+  /* Skills */
+  .skills { padding: var(--space-8) 20px; }
+  .skills__grid { grid-template-columns: 1fr; }
+
+  /* Life corner */
+  .life__grid { grid-template-columns: 1fr; }
+  .life { padding: var(--space-8) 20px; }
+
+  /* Learning */
+  .learning { padding: var(--space-8) 20px; }
+
+  /* Contact */
+  .contact { padding: var(--space-8) 20px; }
+  .contact__card { padding: 28px 20px; }
+
+  /* Float dock */
+  .fdock { right: 12px; bottom: 16px; }
+  .fdock__avatar { width: 46px; height: 46px; }
+
+  /* Cert modal */
+  .cmodal__panel { padding: 24px 18px 40px; border-radius: 20px 20px 0 0; width: 100%; max-height: 90vh; }
+}
