@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--white);}
+  body{padding:0;}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--ink-100);}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand img{height:28px;}
+  .brand .wd{font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--ink-900);}
+  ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  li a{font-family:var(--font-body);font-weight:500;font-size:14px;color:var(--ink-700);text-decoration:none;position:relative;padding:6px 0;}
+  li a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;background:var(--sky-500);transform:scaleX(0);transform-origin:left;transition:.25s var(--ease-out-soft);}
+  li a:hover::after,li a.active::after{transform:scaleX(1);}
+  li a.active{color:var(--sky-700);}
+  .cta{font-family:var(--font-body);font-weight:600;font-size:13px;color:var(--pink-700);background:var(--white);border:1.5px solid var(--pink-500);padding:8px 16px;border-radius:var(--radius-md);}
+  .pad{height:50px;background:linear-gradient(180deg,var(--sky-50),transparent);}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="brand"><img src="../assets/logo-mark.svg" alt=""><span class="wd">星辰 · Sin-Cen</span></div>
+    <ul>
+      <li><a href="#" class="active">關於我</a></li>
+      <li><a href="#">精選專案</a></li>
+      <li><a href="#">技術與證照</a></li>
+      <li><a href="#">生活角落</a></li>
+    </ul>
+    <button class="cta">聯絡我</button>
+  </nav>
+  <div class="pad"></div>
+</body>
+</html>

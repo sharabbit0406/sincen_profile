@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--white);}
+  body{padding:24px 32px;}
+  .row{display:flex;justify-content:space-between;align-items:center;gap:24px;}
+  .left{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+  .chip{font-family:var(--font-mono);font-weight:500;font-size:13px;padding:6px 12px;border-radius:999px;background:var(--sky-100);color:var(--sky-800);border:1px solid var(--sky-300);}
+  .chip.pink{background:var(--pink-100);color:var(--pink-800);border-color:var(--pink-300);}
+  .code{font-family:var(--font-mono);font-size:13px;color:var(--ink-900);background:var(--ink-50);padding:4px 8px;border-radius:6px;border:1px solid var(--ink-100);}
+  .right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right;}
+  .meta{font-family:var(--font-mono);font-size:11px;color:var(--ink-500);}
+  .pill{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-700);background:var(--ink-100);padding:3px 10px;border-radius:999px;}
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="left">
+      <span class="chip">Python</span>
+      <span class="chip">LangGraph</span>
+      <span class="chip">Gemini</span>
+      <span class="chip pink">RAG</span>
+      <span class="chip pink">MCP</span>
+      <span class="code">→ Rerank</span>
+    </div>
+    <div class="right">
+      <div class="pill">Mono</div>
+      <div class="meta">JetBrains Mono · 500</div>
+      <div class="meta">Tech chips · code</div>
+    </div>
+  </div>
+</body>
+</html>

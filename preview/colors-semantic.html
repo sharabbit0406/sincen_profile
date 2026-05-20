@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--white); }
+  body { padding: 24px 28px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .role {
+    display: flex; flex-direction: column; gap: 6px;
+    padding: 14px;
+    background: var(--cream);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--ink-100);
+  }
+  .swatch {
+    height: 56px; border-radius: var(--radius-sm); margin-bottom: 4px;
+  }
+  .role .name { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: var(--ink-900);}
+  .role .meta { font-family: var(--font-mono); font-size: 10px; color: var(--ink-500); }
+  .role .use  { font-family: var(--font-body); font-size: 11px; color: var(--ink-700); line-height: 1.45; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="role">
+      <div class="swatch" style="background:#A6D8F5"></div>
+      <div class="name">Primary · Sky 500</div>
+      <div class="meta">#A6D8F5</div>
+      <div class="use">CTAs, link hover, focus rings, hero halo</div>
+    </div>
+    <div class="role">
+      <div class="swatch" style="background:#F8BBD0"></div>
+      <div class="name">Accent · Pink 500</div>
+      <div class="meta">#F8BBD0</div>
+      <div class="use">Tags, secondary buttons, icon hover</div>
+    </div>
+    <div class="role">
+      <div class="swatch" style="background:#FFFFFF;border:1px solid #EEF1F4"></div>
+      <div class="name">Surface · White</div>
+      <div class="meta">#FFFFFF</div>
+      <div class="use">Page background — always majority</div>
+    </div>
+    <div class="role">
+      <div class="swatch" style="background:#1F2A37"></div>
+      <div class="name">Text · Ink 900</div>
+      <div class="meta">#1F2A37</div>
+      <div class="use">Body copy, headings</div>
+    </div>
+  </div>
+</body>
+</html>

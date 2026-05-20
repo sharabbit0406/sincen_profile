@@ -1,0 +1,340 @@
+/* ============================================================
+   星辰 Design System — Colors & Type
+   Personal portfolio for Sin-Cen Huang (黃心岑)
+   Cinnamoroll sky blue × soft pink × pure white
+   ============================================================ */
+
+/* --- Fonts (Google Fonts CDN). Loaded via <link> in HTML;
+   the @import below is a fallback for files that prefer it. --- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=LXGW+WenKai+TC&family=JetBrains+Mono:wght@500;600&display=swap');
+
+:root {
+  /* ---------- Color: Sky (primary) ---------- */
+  --sky-50:  #F4FAFE;
+  --sky-100: #EAF6FD;
+  --sky-200: #D6ECFA;
+  --sky-300: #C9E7F8;
+  --sky-400: #B4DEF7;
+  --sky-500: #A6D8F5;   /* Cinnamoroll Sky — brand primary */
+  --sky-600: #7FC2E8;
+  --sky-700: #4B9CD3;
+  --sky-800: #2F7DB0;
+  --sky-900: #1E5C8A;
+
+  /* ---------- Color: Pink (accent) ---------- */
+  --pink-50:  #FFF7FA;
+  --pink-100: #FDE9F0;
+  --pink-200: #FBD9E5;
+  --pink-300: #F8CBDC;
+  --pink-400: #F8C0D3;
+  --pink-500: #F8BBD0;   /* Soft Pink — brand accent (anchor) */
+  --pink-600: #EE9DBA;
+  --pink-700: #D17E9F;
+  --pink-800: #A95E7E;
+  --pink-900: #74415A;
+
+  /* ---------- Color: Ink (text + neutrals) ---------- */
+  --ink-900: #1F2A37;
+  --ink-700: #3B4858;
+  --ink-500: #6B7785;
+  --ink-400: #99A2AE;
+  --ink-300: #C7CED6;
+  --ink-200: #DDE3E9;
+  --ink-100: #EEF1F4;
+  --ink-50:  #F6F8FA;
+
+  /* ---------- Surface ---------- */
+  --white:   #FFFFFF;
+  --cream:   #FAFBFD;     /* very faint off-white for section alternation */
+  --mint-500:#B8E6D2;     /* rare success / live dot */
+
+  /* ---------- Semantic foreground / background ---------- */
+  --fg-1: var(--ink-900);    /* primary body */
+  --fg-2: var(--ink-700);    /* sub-heads */
+  --fg-3: var(--ink-500);    /* captions, meta */
+  --fg-muted: var(--ink-400);
+  --fg-inverted: var(--white);
+
+  --bg-page: var(--white);
+  --bg-alt:  var(--cream);
+  --bg-tint-sky:  rgba(166, 216, 245, 0.10);
+  --bg-tint-pink: rgba(248, 187, 208, 0.10);
+
+  --border-hairline: var(--ink-200);
+  --border-card-hover: var(--sky-300);
+
+  /* ---------- Semantic accents ---------- */
+  --accent-primary: var(--sky-500);
+  --accent-primary-hover: var(--sky-600);
+  --accent-primary-press: var(--sky-700);
+  --accent-secondary: var(--pink-500);
+  --accent-secondary-hover: var(--pink-600);
+
+  /* ---------- Radii ---------- */
+  --radius-xs: 6px;
+  --radius-sm: 12px;       /* inputs */
+  --radius-md: 16px;       /* cards, buttons */
+  --radius-lg: 20px;       /* modals */
+  --radius-xl: 28px;       /* hero panels */
+  --radius-pill: 999px;    /* tags, chips */
+
+  /* ---------- Spacing (4px base) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ---------- Elevation / shadows (always tinted) ---------- */
+  --shadow-soft:
+    0 4px 16px -4px rgba(166, 216, 245, 0.35),
+    0 1px 2px rgba(31, 42, 55, 0.04);
+
+  --shadow-lift:
+    0 16px 40px -12px rgba(166, 216, 245, 0.45),
+    0 4px 8px rgba(31, 42, 55, 0.06);
+
+  --shadow-pink:
+    0 4px 16px -4px rgba(248, 187, 208, 0.45),
+    0 1px 2px rgba(31, 42, 55, 0.04);
+
+  --shadow-ring-sky:  0 0 0 4px rgba(166, 216, 245, 0.35);
+  --shadow-ring-pink: 0 0 0 4px rgba(248, 187, 208, 0.35);
+
+  /* ---------- Signature gradient (applies to all framed shapes) ---------- */
+  --gradient-frame:        linear-gradient(90deg, #ECF4FB 0%, #FAF0F6 100%);
+  --gradient-frame-soft:   linear-gradient(90deg, #F6FAFD 0%, #FDF7FA 100%);
+  --gradient-frame-strong: linear-gradient(90deg, #DEEDF8 0%, #F7E4EC 100%);
+  --gradient-frame-border: linear-gradient(90deg, #C9E1F2 0%, #F2CFDC 100%);
+
+  /* ---------- Motion ---------- */
+  --ease-out-soft:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-overshoot:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-micro:  150ms;
+  --dur-base:   250ms;
+  --dur-stage:  400ms;
+  --dur-hero:   600ms;
+
+  /* ---------- Fonts ---------- */
+  --font-display: 'Quicksand', 'Noto Sans TC', system-ui, sans-serif;
+  --font-body:    'Plus Jakarta Sans', 'Noto Sans TC', system-ui, sans-serif;
+  --font-zh-pull: 'LXGW WenKai TC', 'Noto Serif TC', serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+
+  /* ---------- Type scale (1.250 ratio) ---------- */
+  --fs-xs:   12px;
+  --fs-sm:   14px;
+  --fs-base: 16px;
+  --fs-md:   20px;
+  --fs-lg:   24px;
+  --fs-xl:   30px;
+  --fs-2xl:  36px;
+  --fs-3xl:  48px;
+  --fs-4xl:  60px;
+
+  /* ---------- Line heights ---------- */
+  --lh-tight:   1.1;
+  --lh-snug:    1.3;
+  --lh-normal:  1.55;
+  --lh-zh:      1.75;       /* Chinese body needs more air */
+
+  /* ---------- Letter spacing ---------- */
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-cap:    0.12em;
+
+  /* ---------- Layout ---------- */
+  --container-max: 1200px;
+  --prose-max:     880px;
+  --section-pad-y: 96px;
+  --section-pad-y-sm: 64px;
+}
+
+/* ============================================================
+   Base reset & body
+   ============================================================ */
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  background: var(--bg-page);
+}
+
+/* Chinese paragraphs get more line height; mark with lang or class */
+:lang(zh), :lang(zh-TW), .lang-zh, .lang-zh * {
+  line-height: var(--lh-zh);
+}
+
+/* ============================================================
+   Semantic typography
+   ============================================================ */
+
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-4xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-3xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+h4, .h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-md);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+p, .p {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  color: var(--fg-2);
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--fg-3);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-cap);
+  text-transform: uppercase;
+  color: var(--accent-primary);
+}
+
+.code, code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  font-weight: 500;
+}
+
+.zh-pull {
+  font-family: var(--font-zh-pull);
+  font-weight: 400;
+}
+
+/* Inline highlight — pink underline accent */
+.hi {
+  background: linear-gradient(transparent 60%, var(--pink-300) 60%);
+  padding: 0 2px;
+}
+
+/* ============================================================
+   Reusable primitives (shipped here for kit components to inherit)
+   ============================================================ */
+
+.btn {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-family: var(--font-body);
+  font-weight: 600; font-size: var(--fs-base);
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--dur-micro) var(--ease-out-soft),
+              background var(--dur-micro) var(--ease-out-soft),
+              box-shadow var(--dur-base) var(--ease-out-soft),
+              color var(--dur-micro) var(--ease-out-soft);
+}
+.btn-primary {
+  background: var(--gradient-frame);
+  color: var(--ink-900);
+  border-color: rgba(166, 216, 245, 0.55);
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover { background: var(--gradient-frame-strong); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.btn-primary:active { transform: translateY(0); box-shadow: var(--shadow-soft); }
+
+.btn-secondary {
+  background: var(--gradient-frame);
+  color: var(--pink-700);
+  border-color: rgba(248, 187, 208, 0.7);
+}
+.btn-secondary:hover { background: var(--gradient-frame-strong); }
+.btn-secondary:active { background: var(--gradient-frame-strong); transform: translateY(1px); }
+
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--gradient-frame);
+  color: var(--pink-800);
+  border: 1px solid rgba(248, 187, 208, 0.4);
+}
+.tag-sky { background: var(--gradient-frame); color: var(--sky-800); border: 1px solid rgba(166, 216, 245, 0.45); }
+
+.card {
+  background: var(--gradient-frame-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(166, 216, 245, 0.4);
+  transition: transform var(--dur-base) var(--ease-overshoot),
+              box-shadow var(--dur-base) var(--ease-out-soft),
+              border-color var(--dur-base) var(--ease-out-soft);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+  border-color: var(--border-card-hover);
+}

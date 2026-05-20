@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--white);}
+  body{padding:24px 28px;display:flex;gap:24px;align-items:stretch;}
+  .col{flex:1;background:var(--cream);border-radius:14px;padding:16px 18px;}
+  .h{font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink-900);display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+  .dot{width:10px;height:10px;border-radius:999px;}
+  .item{font-family:var(--font-body);font-size:12px;color:var(--ink-700);margin:4px 0;line-height:1.5;}
+  .item b{color:var(--ink-900);}
+  .ex{font-family:var(--font-body);font-style:italic;font-size:11px;color:var(--ink-500);}
+</style>
+</head>
+<body>
+  <div class="col">
+    <div class="h"><span class="dot" style="background:var(--sky-500)"></span>Psychology register</div>
+    <div class="item"><b>溫度</b> · 同理 · 倫理</div>
+    <div class="item"><b>承載使用者的心</b></div>
+    <div class="ex">「最好的科技不只要高效解決問題，更要能真正理解並承載使用者的心。」</div>
+  </div>
+  <div class="col">
+    <div class="h"><span class="dot" style="background:var(--pink-500)"></span>Engineering register</div>
+    <div class="item"><b>架構</b> · 落地 · 量化</div>
+    <div class="item"><b>導入二階段 Rerank 重排序機制</b></div>
+    <div class="ex">「透過 MCP 協定大幅提升系統擴充性，解決精確數值查找痛點。」</div>
+  </div>
+</body>
+</html>

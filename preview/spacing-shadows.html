@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--cream);}
+  body{padding:36px 28px;display:flex;gap:32px;justify-content:center;align-items:center;}
+  .item{display:flex;flex-direction:column;align-items:center;gap:14px;}
+  .box{width:110px;height:80px;background:var(--white);border-radius:var(--radius-md);}
+  .soft{box-shadow:var(--shadow-soft);}
+  .lift{box-shadow:var(--shadow-lift);}
+  .pink{box-shadow:var(--shadow-pink);}
+  .lab{font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--ink-900);}
+  .meta{font-family:var(--font-mono);font-size:10px;color:var(--ink-500);text-align:center;line-height:1.4;}
+</style>
+</head>
+<body>
+  <div class="item"><div class="box soft"></div><div class="lab">shadow-soft</div><div class="meta">resting card<br>sky-tinted</div></div>
+  <div class="item"><div class="box lift"></div><div class="lab">shadow-lift</div><div class="meta">hover · active<br>larger spread</div></div>
+  <div class="item"><div class="box pink"></div><div class="lab">shadow-pink</div><div class="meta">pink button<br>focus / accent</div></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--white);}
+  body{padding:24px 32px;}
+  .row{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;}
+  .body p{font-family:var(--font-body);font-size:16px;line-height:1.55;color:var(--ink-700);margin:0;max-width:520px;}
+  .body p+p{margin-top:6px;}
+  .body .name{font-family:var(--font-body);font-size:26px;font-weight:700;color:var(--ink-900);line-height:1.2;margin-bottom:8px;letter-spacing:-0.01em;}
+  .right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right;}
+  .meta{font-family:var(--font-mono);font-size:11px;color:var(--ink-500);}
+  .pill{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--pink-700);background:var(--pink-100);padding:3px 10px;border-radius:999px;}
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="body">
+      <div class="name">Plus Jakarta Sans</div>
+      <p>The best technology doesn't just solve problems efficiently —</p>
+      <p>it must truly understand and hold the user's heart.</p>
+    </div>
+    <div class="right">
+      <div class="pill">Body</div>
+      <div class="meta">400 · 500 · 600 · 700</div>
+      <div class="meta">Paragraphs · UI · Buttons</div>
+    </div>
+  </div>
+</body>
+</html>

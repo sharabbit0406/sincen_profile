@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--white); }
+  body { padding: 20px 24px; }
+  .row { display: flex; gap: 0; align-items: stretch; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-soft); }
+  .sw { flex: 1; aspect-ratio: 2/1; display: flex; flex-direction: column; justify-content: flex-end; padding: 10px 12px; }
+  .sw .name { font-family: var(--font-body); font-size: 11px; font-weight: 600; }
+  .sw .hex  { font-family: var(--font-mono); font-size: 10px; opacity: 0.75; margin-top: 2px; }
+  .label { font-family: var(--font-display); font-weight: 600; font-size: 14px; color: var(--ink-700); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 14px; height: 14px; border-radius: 999px; background: var(--pink-500); display: inline-block; }
+</style>
+</head>
+<body>
+  <div class="label"><span class="dot"></span>Pink — Soft accent</div>
+  <div class="row">
+    <div class="sw" style="background:#FFF7FA;color:#1F2A37"><div class="name">pink-50</div><div class="hex">#FFF7FA</div></div>
+    <div class="sw" style="background:#FDE9F0;color:#1F2A37"><div class="name">pink-100</div><div class="hex">#FDE9F0</div></div>
+    <div class="sw" style="background:#FBD9E5;color:#1F2A37"><div class="name">pink-200</div><div class="hex">#FBD9E5</div></div>
+    <div class="sw" style="background:#F8CBDC;color:#1F2A37"><div class="name">pink-300</div><div class="hex">#F8CBDC</div></div>
+    <div class="sw" style="background:#F8C0D3;color:#1F2A37"><div class="name">pink-400</div><div class="hex">#F8C0D3</div></div>
+    <div class="sw" style="background:#F8BBD0;color:#1F2A37"><div class="name">pink-500 ★</div><div class="hex">#F8BBD0</div></div>
+    <div class="sw" style="background:#EE9DBA;color:#1F2A37"><div class="name">pink-600</div><div class="hex">#EE9DBA</div></div>
+    <div class="sw" style="background:#D17E9F;color:#fff"><div class="name">pink-700</div><div class="hex">#D17E9F</div></div>
+    <div class="sw" style="background:#A95E7E;color:#fff"><div class="name">pink-800</div><div class="hex">#A95E7E</div></div>
+    <div class="sw" style="background:#74415A;color:#fff"><div class="name">pink-900</div><div class="hex">#74415A</div></div>
+  </div>
+</body>
+</html>

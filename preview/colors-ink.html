@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--white); }
+  body { padding: 20px 24px; }
+  .row { display: flex; gap: 0; align-items: stretch; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-soft); }
+  .sw { flex: 1; aspect-ratio: 2/1; display: flex; flex-direction: column; justify-content: flex-end; padding: 10px 12px; }
+  .sw .name { font-family: var(--font-body); font-size: 11px; font-weight: 600; }
+  .sw .hex  { font-family: var(--font-mono); font-size: 10px; opacity: 0.75; margin-top: 2px; }
+  .label { font-family: var(--font-display); font-weight: 600; font-size: 14px; color: var(--ink-700); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 14px; height: 14px; border-radius: 999px; background: var(--ink-700); display: inline-block; }
+</style>
+</head>
+<body>
+  <div class="label"><span class="dot"></span>Ink — Neutrals &amp; text</div>
+  <div class="row">
+    <div class="sw" style="background:#FFFFFF;border:1px solid #EEF1F4;color:#1F2A37"><div class="name">white</div><div class="hex">#FFFFFF</div></div>
+    <div class="sw" style="background:#FAFBFD;color:#1F2A37"><div class="name">cream</div><div class="hex">#FAFBFD</div></div>
+    <div class="sw" style="background:#F6F8FA;color:#1F2A37"><div class="name">ink-50</div><div class="hex">#F6F8FA</div></div>
+    <div class="sw" style="background:#EEF1F4;color:#1F2A37"><div class="name">ink-100</div><div class="hex">#EEF1F4</div></div>
+    <div class="sw" style="background:#DDE3E9;color:#1F2A37"><div class="name">ink-200</div><div class="hex">#DDE3E9</div></div>
+    <div class="sw" style="background:#C7CED6;color:#1F2A37"><div class="name">ink-300</div><div class="hex">#C7CED6</div></div>
+    <div class="sw" style="background:#99A2AE;color:#fff"><div class="name">ink-400</div><div class="hex">#99A2AE</div></div>
+    <div class="sw" style="background:#6B7785;color:#fff"><div class="name">ink-500</div><div class="hex">#6B7785</div></div>
+    <div class="sw" style="background:#3B4858;color:#fff"><div class="name">ink-700</div><div class="hex">#3B4858</div></div>
+    <div class="sw" style="background:#1F2A37;color:#fff"><div class="name">ink-900</div><div class="hex">#1F2A37</div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--white);}
+  body{padding:24px 28px;display:flex;gap:24px;align-items:center;justify-content:space-around;}
+  .item{display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .stage{width:140px;height:120px;background:var(--cream);border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+  .stage svg{color:var(--sky-400);}
+  .pink-stage svg{color:var(--pink-400);}
+  .halo{background:radial-gradient(circle at center, var(--sky-300) 0%, transparent 70%);}
+  .name{font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--ink-900);}
+  .meta{font-family:var(--font-mono);font-size:10px;color:var(--ink-500);}
+</style>
+</head>
+<body>
+  <div class="item">
+    <div class="stage"><svg width="92" height="56" viewBox="0 0 120 70" fill="currentColor"><path d="M28 50c-12 0-20-7-20-17 0-9 7-15 16-15 1-9 9-15 18-15 9 0 17 6 19 15 2-1 5-1 8-1 12 0 22 8 22 19 0 10-9 17-22 17H28z"/></svg></div>
+    <div class="name">Cloud</div>
+    <div class="meta">cloud.svg · sky-400</div>
+  </div>
+  <div class="item">
+    <div class="stage halo"></div>
+    <div class="name">Halo</div>
+    <div class="meta">radial · hero portrait</div>
+  </div>
+  <div class="item">
+    <div class="stage pink-stage"><svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L13.7 9.2 L21 11 L13.7 12.8 L12 20 L10.3 12.8 L3 11 L10.3 9.2 Z"/></svg></div>
+    <div class="name">Sparkle</div>
+    <div class="meta">sparkle.svg · pink-400</div>
+  </div>
+  <div class="item">
+    <div class="stage" style="background:var(--pink-100);"><svg width="60" height="68" viewBox="0 0 80 90" fill="#F8BBD0"><ellipse cx="22" cy="20" rx="7" ry="18"/><ellipse cx="50" cy="20" rx="7" ry="18"/><circle cx="36" cy="55" r="28"/></svg></div>
+    <div class="name">Bunny</div>
+    <div class="meta">bunny.svg · life corner</div>
+  </div>
+</body>
+</html>

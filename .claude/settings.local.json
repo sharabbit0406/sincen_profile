@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\sha\\\\Documents\\\\生成式AI學習\\\\個人專案網頁\\\\sincen\" -Force)",
+      "Bash(Select-Object Name, Mode)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\sha\\\\Documents\\\\生成式AI學習\\\\個人專案網頁\\\\sincen\" -File | ForEach-Object { Write-Host \"$\\($_.Name\\) - $\\($_.Length\\) bytes\" })",
+      "PowerShell(Start-Process \"c:\\\\Users\\\\sha\\\\Documents\\\\�ͦ���AI�ǲ�\\\\�ӤH�M�׺���\\\\sincen\\\\ui_kits\\\\portfolio\\\\index.html\")",
+      "Bash(python -m http.server 8787)",
+      "PowerShell(Start-Process \"http://localhost:8787\")",
+      "Bash(python -m http.server 8788)",
+      "PowerShell(Start-Process \"http://localhost:8788/ui_kits/portfolio/\")",
+      "Bash(gh auth *)",
+      "Bash(git --version)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)"
+    ]
+  }
+}

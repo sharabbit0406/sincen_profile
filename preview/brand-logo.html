@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--white);}
+  body{padding:32px;display:flex;align-items:center;gap:48px;}
+  .a{flex:1;display:flex;align-items:center;gap:14px;}
+  .a img{height:42px;}
+  .wd{font-family:var(--font-display);font-weight:700;font-size:28px;color:var(--ink-900);}
+  .sub{font-family:var(--font-body);font-weight:500;font-size:13px;color:var(--ink-500);margin-top:2px;letter-spacing:.04em;}
+  .b{display:flex;align-items:center;gap:14px;}
+  .mark{width:64px;height:64px;background:var(--cream);border-radius:16px;display:flex;align-items:center;justify-content:center;}
+  .mark img{width:36px;height:36px;}
+  .dark{background:var(--ink-900);}
+  .sky{background:var(--sky-500);}
+  .pink{background:var(--pink-500);}
+</style>
+</head>
+<body>
+  <div class="a">
+    <img src="../assets/logo-mark.svg" alt="">
+    <div>
+      <div class="wd">星辰 · Sin-Cen</div>
+      <div class="sub">AI × Mind · 數位心理建築師</div>
+    </div>
+  </div>
+  <div class="b">
+    <div class="mark"><img src="../assets/logo-mark.svg" alt=""></div>
+    <div class="mark sky"><img src="../assets/logo-mark.svg" style="filter:brightness(0) invert(1)"></div>
+    <div class="mark pink"><img src="../assets/logo-mark.svg" style="filter:brightness(0) invert(1)"></div>
+    <div class="mark dark"><img src="../assets/logo-mark.svg" alt=""></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--white);}
+  body{padding:32px 28px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;}
+  button{font-family:var(--font-body);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:var(--radius-md);border:1.5px solid transparent;cursor:pointer;transition:.2s var(--ease-out-soft);}
+  .primary{background:var(--gradient-frame-strong);color:var(--ink-900);border-color:rgba(127,194,232,.55);box-shadow:var(--shadow-soft);}
+  .primary:hover{background:var(--gradient-frame);transform:translateY(-2px);box-shadow:var(--shadow-lift);}
+  .secondary{background:var(--gradient-frame);color:var(--pink-700);border-color:var(--pink-400);}
+  .secondary:hover{background:var(--gradient-frame-strong);}
+  .ghost{background:var(--gradient-frame-soft);color:var(--sky-700);border-color:rgba(166,216,245,.4);}
+  .ghost:hover{background:var(--gradient-frame);}
+  .arrow{font-family:var(--font-display);font-weight:500;}
+</style>
+</head>
+<body>
+  <button class="primary">查看實戰專案 <span class="arrow">→</span></button>
+  <button class="secondary">聯絡我</button>
+  <button class="ghost">了解更多</button>
+</body>
+</html>

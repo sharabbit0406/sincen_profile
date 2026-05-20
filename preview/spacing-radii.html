@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--white);}
+  body{padding:24px 28px;display:flex;gap:18px;align-items:center;justify-content:center;}
+  .item{display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .box{width:92px;height:72px;background:var(--sky-100);border:1px solid var(--sky-300);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:var(--sky-800);}
+  .lab{font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--ink-900);}
+  .meta{font-family:var(--font-mono);font-size:10px;color:var(--ink-500);}
+</style>
+</head>
+<body>
+  <div class="item"><div class="box" style="border-radius:6px">6</div><div class="lab">xs</div><div class="meta">6px</div></div>
+  <div class="item"><div class="box" style="border-radius:12px">12</div><div class="lab">sm · input</div><div class="meta">12px</div></div>
+  <div class="item"><div class="box" style="border-radius:16px">16</div><div class="lab">md · card</div><div class="meta">16px</div></div>
+  <div class="item"><div class="box" style="border-radius:20px">20</div><div class="lab">lg · modal</div><div class="meta">20px</div></div>
+  <div class="item"><div class="box" style="border-radius:28px">28</div><div class="lab">xl · hero</div><div class="meta">28px</div></div>
+  <div class="item"><div class="box" style="border-radius:999px">∞</div><div class="lab">pill · tag</div><div class="meta">999px</div></div>
+</body>
+</html>
