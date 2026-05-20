@@ -30,6 +30,7 @@
 <script type="text/babel" src="Navbar.jsx"></script>
 <script type="text/babel" src="Hero.jsx"></script>
 <script type="text/babel" src="About.jsx"></script>
+<script type="text/babel" src="Timeline.jsx"></script>
 <script type="text/babel" src="ProjectCard.jsx"></script>
 <script type="text/babel" src="ProjectModal.jsx"></script>
 <script type="text/babel" src="Projects.jsx"></script>
@@ -48,7 +49,7 @@
     const [highlightedCert, setHighlightedCert] = useState(null);
 
     useEffect(() => {
-      const sectionIds = ["hero", "about", "projects", "skills", "learning", "life", "contact"];
+      const sectionIds = ["hero", "about", "timeline", "projects", "skills", "learning", "life", "contact"];
       const onScroll = () => {
         document.documentElement.style.setProperty("--scroll-y", window.scrollY + "px");
         for (const id of [...sectionIds].reverse()) {
@@ -92,6 +93,7 @@
           onCertClick={onCertClick}
         />
         <window.About />
+        <window.Timeline />
         <window.Projects />
         <window.Skills highlightedCert={highlightedCert} />
         <window.LearningJourney />
@@ -104,7 +106,7 @@
 
   // Wait for window globals from babel-loaded files
   function mountWhenReady() {
-    if (window.Navbar && window.Hero && window.About && window.Projects && window.Skills && window.LearningJourney && window.LifeCorner && window.Contact && window.Lightbox && window.CertModal && window.FloatDock) {
+    if (window.Navbar && window.Hero && window.About && window.Timeline && window.Projects && window.Skills && window.LearningJourney && window.LifeCorner && window.Contact && window.Lightbox && window.CertModal && window.FloatDock) {
       ReactDOM.createRoot(document.getElementById("root")).render(<App />);
     } else {
       setTimeout(mountWhenReady, 50);

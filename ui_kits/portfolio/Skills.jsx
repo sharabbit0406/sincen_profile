@@ -14,6 +14,10 @@ function Skills({ highlightedCert }) {
         <p className="section__lede">
             點擊卡片查看準備歷程、考試心得與相關連結。
         </p>
+        <div className="section__stat-group">
+          <span className="section__stat section__stat--pink">3 張 AI 證照</span>
+          <span className="section__stat-pace">每張兩至三週內自學取證</span>
+        </div>
       </div>
 
       <div className="skills__books">

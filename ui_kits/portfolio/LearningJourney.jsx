@@ -21,6 +21,15 @@ function LearningJourney() {
         <p className="section__lede">
           一路上累積的線上課程、工作坊與結業證書 — 從心理學基底走到 AI 工程的軌跡。
         </p>
+        <div className="section__stat-group">
+          <span className="section__stat">29 張 AI 課程完訓證書</span>
+          <div className="section__stat-breakdown">
+            <span>TibaMe · 3 個月內 6 張（含 322 小時結訓）</span>
+            <span>Google · 1 個月內 6 張</span>
+            <span>Microsoft · 1 個月內 16 張</span>
+            <span>經濟部商業發展署 · 1 個月 1 張（18 小時）</span>
+          </div>
+        </div>
       </div>
 
       <div className="learning__grid">

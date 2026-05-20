@@ -14,6 +14,31 @@ function Hero({ onCTA, onContact, onCertClick }) {
           <h1 className="hero__name">
             黃心岑 <span className="hero__name-en">Sin-Cen Huang</span>
           </h1>
+          <div className="hero__stats" aria-label="量化成就">
+            <div className="hero__stat">
+              <div className="hero__stat-main">
+                <span className="hero__stat-num">5</span>
+                <span className="hero__stat-unit">項</span>
+              </div>
+              <span className="hero__stat-lbl">AI 實作專案</span>
+            </div>
+            <div className="hero__stat-sep" aria-hidden="true" />
+            <div className="hero__stat">
+              <div className="hero__stat-main">
+                <span className="hero__stat-num hero__stat-num--pink">3</span>
+                <span className="hero__stat-unit hero__stat-unit--pink">張</span>
+              </div>
+              <span className="hero__stat-lbl">AI 證照</span>
+            </div>
+            <div className="hero__stat-sep" aria-hidden="true" />
+            <div className="hero__stat">
+              <div className="hero__stat-main">
+                <span className="hero__stat-num">29</span>
+                <span className="hero__stat-unit">張</span>
+              </div>
+              <span className="hero__stat-lbl">AI 課程完訓證書</span>
+            </div>
+          </div>
           <p className="hero__title">
             <span className="hero__title-strong">AI 應用工程師</span>
             <span className="hero__title-sep">｜</span>
