@@ -1,7 +1,7 @@
 // Navbar.jsx — sticky top nav with sky underline hover + mobile hamburger
 const { useState, useEffect } = React;
 
-function Navbar({ active = "about", onNavigate }) {
+function Navbar({ active = "about", onNavigate, onAboutOpen }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -19,28 +19,52 @@ function Navbar({ active = "about", onNavigate }) {
   }, [menuOpen]);
 
   const items = [
-    { id: "about",    label: "關於我" },
     { id: "projects", label: "專案實作" },
     { id: "skills",   label: "技術證照" },
-    { id: "learning", label: "學習歷程" },
+    { id: "learning", label: "學習證書" },
     { id: "life",     label: "生活角落" },
     { id: "contact",  label: "聯絡我" }
   ];
 
   const handleNav = (id) => {
     setMenuOpen(false);
-    onNavigate?.(id);
+    if (id === "about") {
+      onAboutOpen?.();
+    } else {
+      onNavigate?.(id);
+    }
   };
 
   return (
     <nav className={`portfolio-nav ${scrolled ? "is-scrolled" : ""} ${menuOpen ? "menu-open" : ""}`}>
       <div className="portfolio-nav__inner">
-        <a className="portfolio-brand" href="#" onClick={(e) => { e.preventDefault(); handleNav("top"); }}>
-          <img src="../../assets/sin-cen-icon.png" alt="" />
-          <span className="portfolio-brand__wd">星辰 · Sharinna</span>
-        </a>
+        {/* Left: brand + 關於我 */}
+        <div className="portfolio-nav__left">
+          <a className="portfolio-brand" href="#" onClick={(e) => { e.preventDefault(); handleNav("top"); }}>
+            <img src="../../assets/sin-cen-icon.png" alt="" />
+            <span className="portfolio-brand__wd">星辰 · Sharinna</span>
+          </a>
+          <a
+            href="#"
+            className={`nav-about-link${active === "about" ? " is-active" : ""}`}
+            onClick={(e) => { e.preventDefault(); handleNav("about"); }}
+          >
+            關於我
+          </a>
+        </div>
 
+        {/* Right: nav links (mobile dropdown includes 關於我) */}
         <ul className="portfolio-nav__links">
+          {/* Mobile-only 關於我 item (hidden on desktop via CSS) */}
+          <li className="portfolio-nav__mobile-about">
+            <a
+              href="#"
+              className={active === "about" ? "is-active" : ""}
+              onClick={(e) => { e.preventDefault(); handleNav("about"); }}
+            >
+              關於我
+            </a>
+          </li>
           {items.map(it => (
             <li key={it.id}>
               <a

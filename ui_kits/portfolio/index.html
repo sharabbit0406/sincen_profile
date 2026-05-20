@@ -29,8 +29,8 @@
 <script type="text/babel" src="Lightbox.jsx"></script>
 <script type="text/babel" src="Navbar.jsx"></script>
 <script type="text/babel" src="Hero.jsx"></script>
-<script type="text/babel" src="About.jsx"></script>
 <script type="text/babel" src="Timeline.jsx"></script>
+<script type="text/babel" src="AboutModal.jsx"></script>
 <script type="text/babel" src="ProjectCard.jsx"></script>
 <script type="text/babel" src="ProjectModal.jsx"></script>
 <script type="text/babel" src="Projects.jsx"></script>
@@ -47,16 +47,17 @@
   function App() {
     const [active, setActive] = useState("about");
     const [highlightedCert, setHighlightedCert] = useState(null);
+    const [aboutOpen, setAboutOpen] = useState(false);
 
     useEffect(() => {
-      const sectionIds = ["hero", "about", "timeline", "projects", "skills", "learning", "life", "contact"];
+      const sectionIds = ["hero", "projects", "skills", "learning", "life", "contact"];
       const onScroll = () => {
         document.documentElement.style.setProperty("--scroll-y", window.scrollY + "px");
         for (const id of [...sectionIds].reverse()) {
           const el = document.getElementById(id);
           if (!el) continue;
           const rect = el.getBoundingClientRect();
-          if (rect.top <= 140) { setActive(id === "hero" ? "about" : id); break; }
+          if (rect.top <= 140) { setActive(id); break; }
         }
       };
       window.addEventListener("scroll", onScroll, true);
@@ -86,14 +87,14 @@
 
     return (
       <React.Fragment>
-        <window.Navbar active={active} onNavigate={onNavigate} />
+        <window.Navbar active={active} onNavigate={onNavigate} onAboutOpen={() => setAboutOpen(true)} />
         <window.Hero
           onCTA={() => onNavigate("projects")}
           onContact={() => onNavigate("contact")}
           onCertClick={onCertClick}
+          onAboutOpen={() => setAboutOpen(true)}
         />
-        <window.About />
-        <window.Timeline />
+        <window.AboutModal open={aboutOpen} onClose={() => setAboutOpen(false)} />
         <window.Projects />
         <window.Skills highlightedCert={highlightedCert} />
         <window.LearningJourney />
@@ -106,7 +107,7 @@
 
   // Wait for window globals from babel-loaded files
   function mountWhenReady() {
-    if (window.Navbar && window.Hero && window.About && window.Timeline && window.Projects && window.Skills && window.LearningJourney && window.LifeCorner && window.Contact && window.Lightbox && window.CertModal && window.FloatDock) {
+    if (window.Navbar && window.Hero && window.AboutModal && window.Timeline && window.Projects && window.Skills && window.LearningJourney && window.LifeCorner && window.Contact && window.Lightbox && window.CertModal && window.FloatDock) {
       ReactDOM.createRoot(document.getElementById("root")).render(<App />);
     } else {
       setTimeout(mountWhenReady, 50);

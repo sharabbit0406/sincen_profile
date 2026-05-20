@@ -311,6 +311,14 @@ p, .p {
 .btn-secondary:hover { background: var(--gradient-frame-strong); }
 .btn-secondary:active { background: var(--gradient-frame-strong); transform: translateY(1px); }
 
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-700);
+  border-color: var(--ink-200);
+}
+.btn-ghost:hover { background: var(--ink-50); border-color: var(--ink-300); color: var(--ink-900); transform: translateY(-1px); }
+.btn-ghost:active { transform: translateY(0); }
+
 .tag {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--font-mono);
