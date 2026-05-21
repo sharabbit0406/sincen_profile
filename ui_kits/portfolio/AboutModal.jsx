@@ -35,6 +35,10 @@ function AboutModal({ open, onClose }) {
           <div className="section__head">
             <div className="eyebrow">About Me</div>
             <h2>關於我 <span className="section__head-en">/ A psychologist who codes</span></h2>
+            <div className="section__stat-group">
+              <span className="section__stat">6 大個人特質</span>
+              <span className="section__stat-pace">學習力 · 責任感 · 同理心 · 執行力 · 規劃力 · 生活平衡</span>
+            </div>
             <p className="section__lede">
               將<b>洞察人性</b>轉化為 <b>AI 體驗優化</b> —— 心理學系出身，<br />
               歷經 AI 培訓，全心投入 AI 工程師職涯。

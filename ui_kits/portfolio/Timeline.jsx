@@ -1,8 +1,18 @@
 // Timeline.jsx — zigzag alternating layout, no horizontal scroll
-const { useState: useStateTL } = React;
+const { useState: useStateTL, useRef: useRefTL, useEffect: useEffTL } = React;
 
 function Timeline() {
   const [openIdx, setOpenIdx] = useStateTL(null);
+  const detailRef = useRefTL(null);
+
+  useEffTL(() => {
+    if (openIdx !== null && detailRef.current) {
+      const t = setTimeout(() => {
+        detailRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 80);
+      return () => clearTimeout(t);
+    }
+  }, [openIdx]);
 
   const ITEMS = [
     {
@@ -159,6 +169,18 @@ function Timeline() {
       <div className="section__head">
         <div className="eyebrow">Journey</div>
         <h2>學習時間軸 <span className="section__head-en">/ From zero to AI engineer</span></h2>
+        <div className="section__stat-group">
+          <div className="section__stat-breakdown section__stat-breakdown--row">
+            <span className="section__stat section__stat--inline">3 張證照</span>
+            <span className="section__stat-pace">兩三週高分考取</span>
+            <span className="section__stat--sep" aria-hidden="true">·</span>
+            <span className="section__stat section__stat--inline">5 項專案</span>
+            <span className="section__stat-pace">平均一個月從零落地</span>
+            <span className="section__stat--sep" aria-hidden="true">·</span>
+            <span className="section__stat section__stat--inline section__stat--pink">29 張課程完訓證書</span>
+            <span className="section__stat-pace">高密集學習</span>
+          </div>
+        </div>
         <p className="section__lede">
           從 2025/06 自學 Python 起，不到一年的完整 AI 轉職軌跡 — 點擊節點或標題查看說明。
         </p>
@@ -247,6 +269,7 @@ function Timeline() {
       {/* Detail panel */}
       {current && (
         <div
+          ref={detailRef}
           className={`tl2__detail tl2__detail--${current.type}`}
           role="region"
           aria-label="節點詳情"

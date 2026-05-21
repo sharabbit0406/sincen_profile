@@ -82,13 +82,13 @@ function Projects() {
       <div className="section__head">
         <div className="eyebrow">Featured Projects</div>
         <h2>精選專案 <span className="section__head-en">/ Things I've shipped</span></h2>
-        <p className="section__lede">
-          每個專案點進去都有<b>技術深潛區</b>，看完關閉視窗就能繼續瀏覽。
-        </p>
         <div className="section__stat-group">
           <span className="section__stat">5 項 AI 實作專案</span>
           <span className="section__stat-pace">平均每月一項從零到落地</span>
         </div>
+        <p className="section__lede">
+          每個專案點進去都有<b>技術深潛區</b>，看完關閉視窗就能繼續瀏覽。
+        </p>
       </div>
 
       <div className="projects__carousel">

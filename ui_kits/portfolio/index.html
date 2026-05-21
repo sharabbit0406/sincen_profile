@@ -5,7 +5,7 @@
 <title>星辰 · Sin-Cen Huang — AI 應用工程師 ｜數位心理建築師</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/sin-cen-icon.png" type="image/png">
 <link rel="preload" as="image" href="../../assets/portrait.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,7 +100,7 @@
         <window.LearningJourney />
         <window.LifeCorner />
         <window.Contact />
-        <window.FloatDock onNavigate={onNavigate} />
+        <window.FloatDock onNavigate={onNavigate} onAboutOpen={() => setAboutOpen(true)} />
       </React.Fragment>
     );
   }

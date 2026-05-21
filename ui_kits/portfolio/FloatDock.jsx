@@ -1,6 +1,6 @@
 const { useState, useEffect, useRef } = React;
 
-function FloatDock({ onNavigate }) {
+function FloatDock({ onNavigate, onAboutOpen }) {
   const [open, setOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -69,15 +69,14 @@ function FloatDock({ onNavigate }) {
 
   const goTop = () => { window.scrollTo({ top: 0, behavior: "smooth" }); setOpen(false); };
   const goContact = () => { onNavigate?.("contact"); setOpen(false); };
+  const goAbout = () => { onAboutOpen?.(); setOpen(false); };
 
   // Icons (inline lucide-style strokes)
   const Icon = {
     arrowUp: <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>,
     mail: <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>,
-    github: <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>,
-    linkedin: <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>,
-    instagram: <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>,
     chat: <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
+    user: <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20v-1a8 8 0 0 1 16 0v1"/></svg>,
     chev: <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 15l-6-6-6 6"/></svg>,
     check: <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>,
   };
@@ -87,9 +86,7 @@ function FloatDock({ onNavigate }) {
     showScrollTop && { key: "top", label: "回到頂部", icon: Icon.arrowUp, onClick: goTop, tone: "sky" },
     { key: "mail", label: copied ? "已複製信箱 ✨" : "複製信箱", icon: copied ? Icon.check : Icon.mail, onClick: handleCopy, tone: "pink", active: copied },
     { key: "contact", label: "聯絡我", icon: Icon.chat, onClick: goContact, tone: "sky" },
-    { key: "gh", label: "GitHub", icon: Icon.github, href: "https://github.com/sharabbit0406", tone: "sky" },
-    { key: "li", label: "LinkedIn", icon: Icon.linkedin, href: "https://www.linkedin.com/in/sharinna%E5%BF%83%E5%B2%91-huang-482207391/", tone: "pink" },
-    { key: "ig", label: "Instagram", icon: Icon.instagram, href: "https://www.instagram.com/starry_4646?igsh=NmJrOGpzMnB0NjI2&utm_source=qr", tone: "pink" },
+    { key: "about", label: "關於我", icon: Icon.user, onClick: goAbout, tone: "sky" },
   ].filter(Boolean);
 
   return (

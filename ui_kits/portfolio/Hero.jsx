@@ -10,18 +10,20 @@ function Hero({ onCTA, onContact, onCertClick, onAboutOpen }) {
   ];
   return (
     <section id="hero" className="hero" data-screen-label="01 Hero">
-      <div className="hero__decor hero__decor--cloud" aria-hidden="true">
-        <img src="../../assets/sin-cen-icon.png" alt="" loading="lazy" />
-      </div>
       <div className="hero__decor hero__decor--sparkle" aria-hidden="true">
         <img src="../../assets/sparkle.svg" alt="" loading="lazy" />
       </div>
 
       <div className="hero__inner">
         <div className="hero__copy">
-          <h1 className="hero__name">
-            黃心岑 <span className="hero__name-en">Sin-Cen Huang</span>
-          </h1>
+          <div className="hero__name-row">
+            <div className="hero__icon-inline" aria-hidden="true">
+              <img src="../../assets/sin-cen-icon.png" alt="" loading="eager" />
+            </div>
+            <h1 className="hero__name">
+              黃心岑 <span className="hero__name-en">Sin-Cen Huang</span>
+            </h1>
+          </div>
           <div className="hero__stats" aria-label="量化成就">
             <div className="hero__stat">
               <div className="hero__stat-main">

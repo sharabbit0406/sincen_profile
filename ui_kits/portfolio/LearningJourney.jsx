@@ -18,9 +18,6 @@ function LearningJourney() {
       <div className="section__head">
         <div className="eyebrow">Learning Journey</div>
         <h2>學習歷程 <span className="section__head-en">/ Self-taught trail</span></h2>
-        <p className="section__lede">
-          一路上累積的線上課程、工作坊與結業證書 — 從心理學基底走到 AI 工程的軌跡。
-        </p>
         <div className="section__stat-group">
           <span className="section__stat">29 張 AI 課程完訓證書</span>
           <div className="section__stat-breakdown">
@@ -30,6 +27,9 @@ function LearningJourney() {
             <span>經濟部商業發展署 · 1 個月 1 張（18 小時）</span>
           </div>
         </div>
+        <p className="section__lede">
+          一路上累積的線上課程、工作坊與結業證書 — 從心理學基底走到 AI 工程的軌跡。
+        </p>
       </div>
 
       <div className="learning__grid">
