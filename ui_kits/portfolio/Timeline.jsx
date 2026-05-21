@@ -124,7 +124,7 @@ function Timeline() {
       type: "project",
       num: "#6",
       title: "個人專屬網頁",
-      desc: "在專注轉職 AI 工程師的這段時間，我幾乎每天都沉浸在 LLM、RAG 與各項開發工具的學習中。為了完整記錄 5 個實作專案，以及近期考取三張證照的歷程，我決定親手打造這個專屬網站。身為專注於 AI 後端開發的學習者，這次我借助了 Claude 的強大輔助，一點一滴地將腦海中的構想化為真實的網頁。從零到有的過程充滿挑戰，但也非常有成就感！這不僅僅是個作品展示空間，更是我近期無數個日夜努力研讀、不斷突破自我的最好證明。",
+      desc: "就是你現在看的這個！在專注轉職 AI 工程師的這段時間，我幾乎每天都沉浸在 LLM、RAG 與各項開發工具的學習中。為了完整記錄 5 個實作專案，以及近期考取三張證照的歷程，我決定親手打造這個專屬網站。身為專注於 AI 後端開發的學習者，這次我借助了 Claude 的強大輔助，一點一滴地將腦海中的構想化為真實的網頁。從零到有的過程充滿挑戰，但也非常有成就感！這不僅僅是個作品展示空間，更是我近期無數個日夜努力研讀、不斷突破自我的最好證明。",
     },
   ];
 
@@ -178,7 +178,7 @@ function Timeline() {
         <h2>學習時間軸 <span className="section__head-en">/ From zero to AI engineer</span></h2>
         <div className="section__stat-group section__stat-group--row">
           <span className="section__stat section__stat--chip">3 張證照 <span className="section__stat-chip-sub">兩三週高分考取</span></span>
-          <span className="section__stat section__stat--chip">5 項專案 <span className="section__stat-chip-sub">平均一個月從零落地</span></span>
+          <span className="section__stat section__stat--chip">5 項專案 <span className="section__stat-chip-sub">平均一個月從零落地１到２項</span></span>
           <span className="section__stat section__stat--chip section__stat--chip-pink">29 張課程完訓證書 <span className="section__stat-chip-sub">高密集學習</span></span>
         </div>
         <p className="section__lede">
