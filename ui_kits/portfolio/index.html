@@ -50,7 +50,7 @@
     const [aboutOpen, setAboutOpen] = useState(false);
 
     useEffect(() => {
-      const sectionIds = ["hero", "projects", "skills", "learning", "life", "contact"];
+      const sectionIds = ["hero", "projects", "skills", "timeline", "learning", "life", "contact"];
       const onScroll = () => {
         document.documentElement.style.setProperty("--scroll-y", window.scrollY + "px");
         for (const id of [...sectionIds].reverse()) {
@@ -97,6 +97,7 @@
         <window.AboutModal open={aboutOpen} onClose={() => setAboutOpen(false)} />
         <window.Projects onAboutOpen={() => setAboutOpen(true)} />
         <window.Skills highlightedCert={highlightedCert} />
+        <window.Timeline />
         <window.LearningJourney />
         <window.LifeCorner />
         <window.Contact />

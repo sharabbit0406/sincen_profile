@@ -22,7 +22,7 @@ function Navbar({ active = "about", onNavigate, onAboutOpen }) {
     { id: "about",    label: "關於我" },
     { id: "projects", label: "專案實作" },
     { id: "skills",   label: "技術證照" },
-    { id: "learning", label: "學習證書" },
+    { id: "timeline", label: "學習歷程" },
     { id: "life",     label: "生活角落" },
     { id: "contact",  label: "聯絡我" }
   ];

@@ -229,10 +229,6 @@ function AboutModal({ open, onClose }) {
             </div>
           </div>
 
-          {/* Learning Timeline */}
-          <hr className="amodal__divider" />
-          <window.Timeline />
-
         </div>
       </div>
       </div>{/* end amodal__scroll */}
