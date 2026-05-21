@@ -16,6 +16,10 @@ function Contact() {
         </a>
 
         <div className="contact__links">
+          <a href="https://vocus.cc/salon/6909abd5fd8978000108f72c" target="_blank" rel="noopener" className="contact__link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Vocus
+          </a>
           <a href="https://www.notion.so/Sharinna-2cdc22921e2d8026a051f520c2e53e31?source=copy_link" target="_blank" rel="noopener" className="contact__link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 7h4M7 12h4M7 17h4M13 7h4M13 12h4M13 17h4"/></svg>
             Notion

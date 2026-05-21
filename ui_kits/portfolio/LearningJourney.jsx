@@ -17,14 +17,14 @@ function LearningJourney() {
 
       <div className="section__head">
         <div className="eyebrow">Learning Journey</div>
-        <h2>學習歷程 <span className="section__head-en">/ Self-taught trail</span></h2>
+        <h2>學習證書 <span className="section__head-en">/ Self-taught trail</span></h2>
         <div className="section__stat-group">
           <span className="section__stat">29 張 AI 課程完訓證書</span>
           <div className="section__stat-breakdown">
             <span>TibaMe · 3 個月內 6 張（含 322 小時結訓）</span>
-            <span>Google · 1 個月內 6 張</span>
-            <span>Microsoft · 1 個月內 16 張</span>
-            <span>經濟部商業發展署 · 1 個月 1 張（18 小時）</span>
+            <span>Google · 1 周內 6 張</span>
+            <span>Microsoft · 兩周內 16 張</span>
+            <span>經濟部商業發展署 · 18 小時</span>
           </div>
         </div>
         <p className="section__lede">
