@@ -20,7 +20,7 @@ function CarouselArrow({ dir, onClick }) {
   );
 }
 
-function Projects() {
+function Projects({ onAboutOpen }) {
   const [open, setOpen] = useStateP(null);
   const [center, setCenter] = useStateP(0);
   const [tickKey, setTickKey] = useStateP(0);
@@ -79,9 +79,19 @@ function Projects() {
       <div className="projects__deco" aria-hidden="true">
         <img src="../../assets/cloud.svg" alt="" loading="lazy" />
       </div>
+
+      {onAboutOpen && (
+        <div className="projects__about-hint">
+          <button type="button" className="projects__about-btn" onClick={onAboutOpen}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            點選可更詳細認識我的特質學經歷喔～
+          </button>
+        </div>
+      )}
+
       <div className="section__head">
         <div className="eyebrow">Featured Projects</div>
-        <h2>精選專案 <span className="section__head-en">/ Things I've shipped</span></h2>
+        <h2>專案實作 <span className="section__head-en">/ Things I've shipped</span></h2>
         <div className="section__stat-group">
           <span className="section__stat">5 項 AI 實作專案</span>
           <span className="section__stat-pace">平均每月一項從零到落地</span>
@@ -91,17 +101,20 @@ function Projects() {
         </p>
       </div>
 
-      <div className="projects__carousel">
+      {/* Arrows live outside the track to avoid click issues during key-remount animation */}
+      <div className="projects__carousel-wrap">
         <CarouselArrow dir="prev" onClick={() => goPrev(true)} />
-        <div className="projects__track" key={tickKey}>
-          {visible.map((idx, slot) => (
-            <div
-              key={projects[idx].id}
-              className={`projects__slot projects__slot--${slot === 1 ? "center" : "side"}`}
-            >
-              <window.ProjectCard project={projects[idx]} onOpen={setOpen} index={idx} />
-            </div>
-          ))}
+        <div className="projects__carousel">
+          <div className="projects__track" key={tickKey}>
+            {visible.map((idx, slot) => (
+              <div
+                key={projects[idx].id}
+                className={`projects__slot projects__slot--${slot === 1 ? "center" : "side"}`}
+              >
+                <window.ProjectCard project={projects[idx]} onOpen={setOpen} index={idx} />
+              </div>
+            ))}
+          </div>
         </div>
         <CarouselArrow dir="next" onClick={() => goNext(true)} />
       </div>

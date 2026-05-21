@@ -95,7 +95,7 @@
           onAboutOpen={() => setAboutOpen(true)}
         />
         <window.AboutModal open={aboutOpen} onClose={() => setAboutOpen(false)} />
-        <window.Projects />
+        <window.Projects onAboutOpen={() => setAboutOpen(true)} />
         <window.Skills highlightedCert={highlightedCert} />
         <window.LearningJourney />
         <window.LifeCorner />

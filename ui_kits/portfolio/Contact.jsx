@@ -16,7 +16,7 @@ function Contact() {
         </a>
 
         <div className="contact__links">
-          <a href="https://www.notion.so/Sharinna-2cdc22921e2d8026a051f520c2e53e31?source=copy_link" target="_blank" rel="noopener" className="contact__link contact__link--notion">
+          <a href="https://www.notion.so/Sharinna-2cdc22921e2d8026a051f520c2e53e31?source=copy_link" target="_blank" rel="noopener" className="contact__link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 7h4M7 12h4M7 17h4M13 7h4M13 12h4M13 17h4"/></svg>
             Notion
           </a>

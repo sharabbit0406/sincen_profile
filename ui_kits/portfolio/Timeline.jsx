@@ -169,17 +169,10 @@ function Timeline() {
       <div className="section__head">
         <div className="eyebrow">Journey</div>
         <h2>學習時間軸 <span className="section__head-en">/ From zero to AI engineer</span></h2>
-        <div className="section__stat-group">
-          <div className="section__stat-breakdown section__stat-breakdown--row">
-            <span className="section__stat section__stat--inline">3 張證照</span>
-            <span className="section__stat-pace">兩三週高分考取</span>
-            <span className="section__stat--sep" aria-hidden="true">·</span>
-            <span className="section__stat section__stat--inline">5 項專案</span>
-            <span className="section__stat-pace">平均一個月從零落地</span>
-            <span className="section__stat--sep" aria-hidden="true">·</span>
-            <span className="section__stat section__stat--inline section__stat--pink">29 張課程完訓證書</span>
-            <span className="section__stat-pace">高密集學習</span>
-          </div>
+        <div className="section__stat-group section__stat-group--row">
+          <span className="section__stat section__stat--chip">3 張證照 <span className="section__stat-chip-sub">兩三週高分考取</span></span>
+          <span className="section__stat section__stat--chip">5 項專案 <span className="section__stat-chip-sub">平均一個月從零落地</span></span>
+          <span className="section__stat section__stat--chip section__stat--chip-pink">29 張課程完訓證書 <span className="section__stat-chip-sub">高密集學習</span></span>
         </div>
         <p className="section__lede">
           從 2025/06 自學 Python 起，不到一年的完整 AI 轉職軌跡 — 點擊節點或標題查看說明。

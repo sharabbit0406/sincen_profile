@@ -270,6 +270,64 @@
   justify-content: center;
   gap: 8px 10px;
 }
+
+/* Timeline 3-chip row */
+.section__stat-group--row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.section__stat--chip {
+  font-size: 16px;
+  padding: 9px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-direction: column;
+  line-height: 1.3;
+  text-align: center;
+}
+.section__stat--chip-pink { color: var(--pink-800); }
+.section__stat-chip-sub {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink-500);
+  letter-spacing: 0;
+}
+
+/* Projects section "認識我" hint button */
+.projects__about-hint {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.projects__about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--gradient-frame);
+  border: 1px solid rgba(166, 216, 245, 0.45);
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--sky-800);
+  cursor: pointer;
+  transition: background var(--dur-micro) var(--ease-out-soft),
+              border-color var(--dur-micro) var(--ease-out-soft),
+              transform var(--dur-micro) var(--ease-out-soft),
+              box-shadow var(--dur-micro) var(--ease-out-soft);
+}
+.projects__about-btn:hover {
+  background: var(--gradient-frame-strong);
+  border-color: var(--sky-300);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
 .section__stat-breakdown {
   display: flex;
   flex-wrap: wrap;
@@ -442,9 +500,15 @@
 }
 
 /* ---------- Carousel ---------- */
+/* Wrapper holds arrows absolutely so they're never affected by track re-mounts */
+.projects__carousel-wrap {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
 .projects__carousel {
-  display: flex; align-items: stretch; gap: 18px;
-  max-width: 1200px; margin: 0 auto;
+  width: 100%;
 }
 .projects__track {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -461,9 +525,9 @@
 .projects__slot--side > .pcard:hover { opacity: 1; }
 
 .carousel__nav {
-  flex-shrink: 0;
-  align-self: center;
-  position: relative; z-index: 2;
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  z-index: 10;
   width: 48px; height: 48px;
   border-radius: 999px;
   background: var(--white);
@@ -478,13 +542,15 @@
               border-color var(--dur-micro) var(--ease-out-soft),
               color var(--dur-micro) var(--ease-out-soft);
 }
+.carousel__nav--prev { left: 0; }
+.carousel__nav--next { right: 0; }
 .carousel__nav:hover {
   background: var(--gradient-frame);
   border-color: var(--sky-300);
   box-shadow: var(--shadow-lift);
-  transform: translateY(-2px);
+  transform: translateY(calc(-50% - 2px));
 }
-.carousel__nav:active { transform: translateY(0); }
+.carousel__nav:active { transform: translateY(-50%); }
 .carousel__nav:focus-visible {
   outline: none;
   box-shadow: var(--shadow-soft), var(--shadow-ring-sky);
@@ -1769,6 +1835,7 @@
   .projects__grid { grid-template-columns: 1fr; }
   .projects__track { grid-template-columns: 1fr; }
   .projects__slot--side { display: none; }
+  .projects__carousel-wrap { padding: 0 50px; }
   .carousel__nav { width: 40px; height: 40px; }
   .life__grid { grid-template-columns: repeat(2, 1fr); }
   .pmodal__panel { width: 100%; padding: 32px 24px 64px; }
@@ -1854,6 +1921,10 @@
   }
   .portfolio-nav__inner { padding: 14px 20px; }
   .portfolio-brand__wd { font-size: 16px; }
+
+  /* Carousel */
+  .projects__carousel-wrap { padding: 0 44px; }
+  .carousel__nav { width: 36px; height: 36px; }
 
   /* Hero */
   .hero { padding: 48px 20px 60px; }
@@ -2021,7 +2092,7 @@
 }
 
 /* ============================================================
-   Navbar — left-side "關於我" link
+   Navbar — left brand block
    ============================================================ */
 .portfolio-nav__left {
   display: flex;

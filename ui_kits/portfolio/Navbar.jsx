@@ -19,6 +19,7 @@ function Navbar({ active = "about", onNavigate, onAboutOpen }) {
   }, [menuOpen]);
 
   const items = [
+    { id: "about",    label: "關於我" },
     { id: "projects", label: "專案實作" },
     { id: "skills",   label: "技術證照" },
     { id: "learning", label: "學習證書" },
@@ -38,37 +39,20 @@ function Navbar({ active = "about", onNavigate, onAboutOpen }) {
   return (
     <nav className={`portfolio-nav ${scrolled ? "is-scrolled" : ""} ${menuOpen ? "menu-open" : ""}`}>
       <div className="portfolio-nav__inner">
-        {/* Left: brand + 關於我 */}
+        {/* Left: brand only */}
         <div className="portfolio-nav__left">
-          <a className="portfolio-brand" href="#" onClick={(e) => { e.preventDefault(); handleNav("top"); }}>
+          <a className="portfolio-brand" href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); onNavigate?.("top"); }}>
             <img src="../../assets/sin-cen-icon.png" alt="" />
             <span className="portfolio-brand__wd">星辰 · Sharinna</span>
           </a>
-          <a
-            href="#"
-            className={`nav-about-link${active === "about" ? " is-active" : ""}`}
-            onClick={(e) => { e.preventDefault(); handleNav("about"); }}
-          >
-            關於我
-          </a>
         </div>
 
-        {/* Right: nav links (mobile dropdown includes 關於我) */}
+        {/* Right: nav links */}
         <ul className="portfolio-nav__links">
-          {/* Mobile-only 關於我 item (hidden on desktop via CSS) */}
-          <li className="portfolio-nav__mobile-about">
-            <a
-              href="#"
-              className={active === "about" ? "is-active" : ""}
-              onClick={(e) => { e.preventDefault(); handleNav("about"); }}
-            >
-              關於我
-            </a>
-          </li>
           {items.map(it => (
             <li key={it.id}>
               <a
-                href={`#${it.id}`}
+                href={it.id !== "about" ? `#${it.id}` : "#"}
                 className={active === it.id ? "is-active" : ""}
                 onClick={(e) => { e.preventDefault(); handleNav(it.id); }}
               >
