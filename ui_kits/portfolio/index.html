@@ -40,6 +40,7 @@
 <script type="text/babel" src="LifeCorner.jsx"></script>
 <script type="text/babel" src="Contact.jsx"></script>
 <script type="text/babel" src="FloatDock.jsx"></script>
+<script type="text/babel" src="ChatWindow.jsx"></script>
 
 <script type="text/babel">
   const { useState, useEffect } = React;
@@ -48,6 +49,7 @@
     const [active, setActive] = useState("about");
     const [highlightedCert, setHighlightedCert] = useState(null);
     const [aboutOpen, setAboutOpen] = useState(false);
+    const [chatOpen, setChatOpen] = useState(false);
 
     useEffect(() => {
       const sectionIds = ["hero", "projects", "skills", "timeline", "learning", "life", "contact"];
@@ -87,7 +89,7 @@
 
     return (
       <React.Fragment>
-        <window.Navbar active={active} onNavigate={onNavigate} onAboutOpen={() => setAboutOpen(true)} />
+        <window.Navbar active={active} onNavigate={onNavigate} onAboutOpen={() => setAboutOpen(true)} onChat={() => setChatOpen(v => !v)} />
         <window.Hero
           onCTA={() => onNavigate("projects")}
           onContact={() => onNavigate("contact")}
@@ -101,14 +103,15 @@
         <window.LearningJourney />
         <window.LifeCorner />
         <window.Contact />
-        <window.FloatDock onNavigate={onNavigate} onAboutOpen={() => setAboutOpen(true)} />
+        <window.FloatDock onNavigate={onNavigate} onAboutOpen={() => setAboutOpen(true)} onChat={() => setChatOpen(v => !v)} />
+        <window.ChatWindow open={chatOpen} onClose={() => setChatOpen(false)} />
       </React.Fragment>
     );
   }
 
   // Wait for window globals from babel-loaded files
   function mountWhenReady() {
-    if (window.Navbar && window.Hero && window.AboutModal && window.Timeline && window.Projects && window.Skills && window.LearningJourney && window.LifeCorner && window.Contact && window.Lightbox && window.CertModal && window.FloatDock) {
+    if (window.Navbar && window.Hero && window.AboutModal && window.Timeline && window.Projects && window.Skills && window.LearningJourney && window.LifeCorner && window.Contact && window.Lightbox && window.CertModal && window.FloatDock && window.ChatWindow) {
       ReactDOM.createRoot(document.getElementById("root")).render(<App />);
     } else {
       setTimeout(mountWhenReady, 50);

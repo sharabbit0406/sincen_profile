@@ -1,7 +1,7 @@
 // Navbar.jsx — sticky top nav with sky underline hover + mobile hamburger
 const { useState, useEffect } = React;
 
-function Navbar({ active = "about", onNavigate, onAboutOpen }) {
+function Navbar({ active = "about", onNavigate, onAboutOpen, onChat }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -61,12 +61,12 @@ function Navbar({ active = "about", onNavigate, onAboutOpen }) {
             </li>
           ))}
           <li className="portfolio-nav__mobile-cta">
-            <button className="portfolio-nav__cta" onClick={() => handleNav("contact")}>聊聊</button>
+            <button className="portfolio-nav__cta" onClick={() => { setMenuOpen(false); onChat?.(); }}>ＡＩ聊聊</button>
           </li>
         </ul>
 
-        <button className="portfolio-nav__cta portfolio-nav__cta--desktop" onClick={() => handleNav("contact")}>
-          聊聊
+        <button className="portfolio-nav__cta portfolio-nav__cta--desktop" onClick={() => onChat?.()}>
+          ＡＩ聊聊
         </button>
 
         <button
