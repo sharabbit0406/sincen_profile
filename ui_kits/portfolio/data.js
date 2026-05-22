@@ -203,7 +203,8 @@ window.PROJECTS = [
     ],
     links: [
       { label: "查看 GitHub 程式碼", url: "#", icon: "github" },
-      { label: "觀看 Demo 影片", url: "#", icon: "video" }
+      { label: "觀看 Demo 影片", url: "#", icon: "video" },
+      { label: "立即體驗", action: "chat", icon: "bot" }
     ]
   }
 ];

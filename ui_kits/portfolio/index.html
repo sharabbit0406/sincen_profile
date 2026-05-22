@@ -95,9 +95,10 @@
           onContact={() => onNavigate("contact")}
           onCertClick={onCertClick}
           onAboutOpen={() => setAboutOpen(true)}
+          onChat={() => setChatOpen(v => !v)}
         />
         <window.AboutModal open={aboutOpen} onClose={() => setAboutOpen(false)} />
-        <window.Projects onAboutOpen={() => setAboutOpen(true)} />
+        <window.Projects onAboutOpen={() => setAboutOpen(true)} onChat={() => setChatOpen(v => !v)} />
         <window.Skills highlightedCert={highlightedCert} />
         <window.Timeline />
         <window.LearningJourney />

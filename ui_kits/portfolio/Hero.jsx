@@ -1,5 +1,5 @@
 // Hero.jsx — left text block, right portrait
-function Hero({ onCTA, onContact, onCertClick, onAboutOpen }) {
+function Hero({ onCTA, onContact, onCertClick, onAboutOpen, onChat }) {
   const TRAITS = [
     "學習力、行動力強",
     "負責任態度",
@@ -90,6 +90,10 @@ function Hero({ onCTA, onContact, onCertClick, onAboutOpen }) {
             <button className="btn btn-ghost" onClick={onAboutOpen}>
               詳細認識我
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            </button>
+            <button className="btn btn-primary hero__chat-btn" onClick={onChat}>
+              AI 聊聊
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M9 11V9a3 3 0 0 1 6 0v2"/><circle cx="9" cy="16" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="16" r="1" fill="currentColor" stroke="none"/><path d="M12 3v3"/></svg>
             </button>
           </div>
         </div>

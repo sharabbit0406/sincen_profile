@@ -1,8 +1,8 @@
 const { useState } = React;
 
 const CHAT_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-  ? "http://localhost:3000/widget/dc3915a9-a1d6-408f-aa3c-a2887543c4b6"
-  : "https://faqrag-frontend-953754688378.us-central1.run.app/widget/dc3915a9-a1d6-408f-aa3c-a2887543c4b6";
+  ? "http://localhost:3000/widget/49f4225e-95b7-45e7-ab73-87df4dc9e7f1"
+  : "https://faqrag-frontend-953754688378.us-central1.run.app/widget/49f4225e-95b7-45e7-ab73-87df4dc9e7f1";
 
 const IconExpand = () => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

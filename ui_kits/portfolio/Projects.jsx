@@ -20,7 +20,7 @@ function CarouselArrow({ dir, onClick }) {
   );
 }
 
-function Projects({ onAboutOpen }) {
+function Projects({ onAboutOpen, onChat }) {
   const [open, setOpen] = useStateP(null);
   const [center, setCenter] = useStateP(0);
   const [tickKey, setTickKey] = useStateP(0);
@@ -148,6 +148,7 @@ function Projects({ onAboutOpen }) {
             onNext={goModalNext}
             index={openIdx}
             total={N}
+            onChat={onChat}
           />
         );
       })()}
