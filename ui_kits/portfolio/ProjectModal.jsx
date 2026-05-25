@@ -41,10 +41,15 @@ function MediaGallery({ media }) {
                 </div>
               ) : item.type === "video" ? (
                 <div className="pmodal__media-thumb-video">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
-                  </svg>
+                  {item.thumb && (
+                    <img src={item.thumb} alt={item.alt || "video thumbnail"} className="pmodal__media-thumb-img" loading="lazy" />
+                  )}
+                  <div className="pmodal__media-thumb-play">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+                    </svg>
+                  </div>
                 </div>
               ) : (
                 <img src={item.src} alt={item.alt || "demo"} className="pmodal__media-img" loading="lazy" />

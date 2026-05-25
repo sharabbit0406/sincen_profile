@@ -79,7 +79,7 @@ window.PROJECTS = [
       { type: "image", src: "../../assets/projects/demo-placeholder-pink.svg", alt: "Demo 示意圖" }
     ],
     links: [
-      { label: "觀看 Demo 影片", url: "https://youtu.be/O44bA_XyY-Y?si=HMauo-f6a6YaT2zr", icon: "video" }
+      { label: "觀看 ＹｏｕＴｕｂｅ 介紹影片", url: "https://youtu.be/O44bA_XyY-Y?si=HMauo-f6a6YaT2zr", icon: "video" }
     ]
   },
   {
@@ -122,12 +122,12 @@ window.PROJECTS = [
       "成功串接 n8n、Vertex AI、Workspace、iOS Webhook,實現高度自動化的個人工作流。"
     ],
     media: [
-      { type: "video", src: "../../project_demo/AI Agent - n8n_demo_compressed.mp4", alt: "雙模態 AI Agent Demo" },
+      { type: "video", src: "../../project_demo/AI Agent - n8n_demo_compressed.mp4", thumb: "../../assets/projects/n8n-demo-thumb.jpg", alt: "雙模態 AI Agent Demo" },
       { type: "image", src: "../../assets/projects/demo-placeholder-sky.svg", alt: "Demo 示意圖" },
       { type: "image", src: "../../assets/projects/demo-placeholder-pink.svg", alt: "Demo 示意圖" }
     ],
     links: [
-      { label: "觀看 Demo 影片", url: "https://youtube.com/shorts/G01-N0I7MGs?feature=share", icon: "video" }
+      { label: "觀看 ＹｏｕＴｕｂｅ 影片", url: "https://youtube.com/shorts/G01-N0I7MGs?feature=share", icon: "video" }
     ]
   },
   {
