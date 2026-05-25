@@ -2242,4 +2242,15 @@
     width: auto;
     height: min(600px, calc(100dvh - 110px));
   }
+  .chat-win__toolbar {
+    height: 36px;
+    padding: 0 8px;
+    gap: 6px;
+  }
+  .chat-win__tool-btn {
+    width: 30px;
+    height: 30px;
+    border-width: 1.5px;
+    background: rgba(255, 255, 255, 0.95);
+  }
 }
