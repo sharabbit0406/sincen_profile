@@ -30,3 +30,11 @@
   transition: all var(--dur-micro) var(--ease-out-soft);
 }
 .lightbox__close:hover { background: rgba(255,255,255,0.2); transform: rotate(90deg); }
+.lightbox__video {
+  max-width: 92vw; max-height: 88vh;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px -20px rgba(0,0,0,0.55);
+  cursor: default;
+  animation: lb-pop 0.22s var(--ease-overshoot);
+  background: #000;
+}

@@ -8,37 +8,60 @@ const PLACEHOLDER_MEDIA = [
 ];
 
 function MediaGallery({ media }) {
+  const [lightbox, setLightbox] = useStateM(null);
   const items = (media && media.length > 0) ? media : PLACEHOLDER_MEDIA;
   return (
-    <div className="pmodal__gallery-wrap">
-      <div className="pmodal__gallery">
-        {items.map((item, i) => (
-          <div key={i} className={`pmodal__media-item pmodal__media-item--${item.type}`}>
-            {item.placeholder ? (
-              <div className="pmodal__media-ph">
-                {item.type === "video" ? (
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <>
+      <div className="pmodal__gallery-wrap">
+        <div className="pmodal__gallery">
+          {items.map((item, i) => (
+            <button
+              key={i}
+              type="button"
+              className={`pmodal__media-item pmodal__media-item--${item.type} ${!item.placeholder ? "pmodal__media-item--clickable" : ""}`}
+              onClick={() => !item.placeholder && setLightbox(item)}
+              aria-label={item.placeholder ? undefined : (item.type === "video" ? "放大播放影片" : `放大圖片 ${i + 1}`)}
+              disabled={item.placeholder}
+            >
+              {item.placeholder ? (
+                <div className="pmodal__media-ph">
+                  {item.type === "video" ? (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+                    </svg>
+                  ) : (
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <rect x="3" y="3" width="18" height="18" rx="2"/>
+                      <circle cx="8.5" cy="8.5" r="1.5"/>
+                      <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                  )}
+                  <span>Demo 示意<br/>正在建造中</span>
+                </div>
+              ) : item.type === "video" ? (
+                <div className="pmodal__media-thumb-video">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="10"/>
                     <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
                   </svg>
-                ) : (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                )}
-                <span>Demo 示意<br/>正在建造中</span>
-              </div>
-            ) : item.type === "video" ? (
-              <video src={item.src} controls playsInline className="pmodal__media-video" />
-            ) : (
-              <img src={item.src} alt={item.alt || "demo"} className="pmodal__media-img" loading="lazy" />
-            )}
-          </div>
-        ))}
+                </div>
+              ) : (
+                <img src={item.src} alt={item.alt || "demo"} className="pmodal__media-img" loading="lazy" />
+              )}
+            </button>
+          ))}
+        </div>
       </div>
-    </div>
+      {lightbox && (
+        <window.Lightbox
+          src={lightbox.src}
+          alt={lightbox.alt}
+          type={lightbox.type}
+          onClose={() => setLightbox(null)}
+        />
+      )}
+    </>
   );
 }
 
