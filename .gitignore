@@ -12,3 +12,7 @@ Thumbs.db
 
 # Dev scratch
 scraps/
+
+# Large original video files (use compressed versions instead)
+project_demo/*_demo.mp4
+!project_demo/*_demo_compressed.mp4
