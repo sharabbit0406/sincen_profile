@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2752" height="1536" viewBox="0 0 2752 1536">
+  <rect width="2752" height="1536" fill="#C8E6F5"/>
+  <text x="1376" y="640" font-family="'Noto Sans TC', 'PingFang TC', sans-serif" font-size="200" font-weight="700" fill="#3E1800" text-anchor="middle" dominant-baseline="middle" letter-spacing="4">DEMO示意圖</text>
+  <text x="1376" y="880" font-family="'Noto Sans TC', 'PingFang TC', sans-serif" font-size="140" font-weight="500" fill="#3E1800" text-anchor="middle" dominant-baseline="middle">正在建造中</text>
+  <path d="M2680 1460 l18 -42 l18 42 l42 18 l-42 18 l-18 42 l-18 -42 l-42 -18 z" fill="#3E1800" opacity="0.35"/>
+</svg>

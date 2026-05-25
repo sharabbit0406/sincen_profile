@@ -35,6 +35,10 @@ window.PROJECTS = [
       "透過 AI 解析量表結果與對話內容,協助使用者將模糊情緒轉化為可閱讀資訊。",
       "建立 AI 陪伴與醫療行為之間清楚的倫理邊界,可作為受監管領域 AI 產品的安全基線。"
     ],
+    media: [
+      { type: "image", src: "../../assets/projects/demo-placeholder-pink.svg", alt: "Demo 示意圖" },
+      { type: "image", src: "../../assets/projects/demo-placeholder-sky.svg", alt: "Demo 示意圖" }
+    ],
     links: [
       { label: "查看 GitHub 程式碼", url: "#", icon: "github" },
       { label: "觀看 Demo 影片", url: "#", icon: "video" }
@@ -69,6 +73,10 @@ window.PROJECTS = [
     impact: [
       "精確規則條款查詢的正確率大幅提升(以二階段 Rerank 取代單一向量檢索)。",
       "MCP 化後,新增第三方工具的開發成本快速穩健。"
+    ],
+    media: [
+      { type: "image", src: "../../assets/projects/demo-placeholder-sky.svg", alt: "Demo 示意圖" },
+      { type: "image", src: "../../assets/projects/demo-placeholder-pink.svg", alt: "Demo 示意圖" }
     ],
     links: [
       { label: "觀看 Demo 影片", url: "https://youtu.be/O44bA_XyY-Y?si=HMauo-f6a6YaT2zr", icon: "video" }
@@ -113,6 +121,10 @@ window.PROJECTS = [
       "語音入口讓使用情境延伸到通勤與駕駛場景,行動時也能完成回信與排程。",
       "成功串接 n8n、Vertex AI、Workspace、iOS Webhook,實現高度自動化的個人工作流。"
     ],
+    media: [
+      { type: "image", src: "../../assets/projects/demo-placeholder-sky.svg", alt: "Demo 示意圖" },
+      { type: "image", src: "../../assets/projects/demo-placeholder-pink.svg", alt: "Demo 示意圖" }
+    ],
     links: [
       { label: "觀看 Demo 影片", url: "https://youtube.com/shorts/G01-N0I7MGs?feature=share", icon: "video" }
     ]
@@ -151,6 +163,10 @@ window.PROJECTS = [
       "比傳統關鍵字過濾大幅提升新聞相關性,符合個人關切的推送比例明顯上升。",
       "成功打造從抓取、過濾、翻譯到推送的端到端自動化新聞流程。",
       "在通訊軟體 (LINE) 上完成 RAG 互動,使用者可針對任何一篇新聞展開深度對話。"
+    ],
+    media: [
+      { type: "image", src: "../../assets/projects/demo-placeholder-pink.svg", alt: "Demo 示意圖" },
+      { type: "image", src: "../../assets/projects/demo-placeholder-sky.svg", alt: "Demo 示意圖" }
     ],
     links: [
       { label: "查看 GitHub 程式碼", url: "https://github.com/sharabbit0406/-AI-Personalized-AI-News-Automation-Assistant", icon: "github" },
@@ -200,6 +216,10 @@ window.PROJECTS = [
       "中小型商家可客製化自己的問答集客服機器人。",
       "可答性判斷層讓 AI 寧可說「不知道」也不亂答,並附上文件引用,建立品牌信任感。",
       "未解問題收集 + AI 自動摘要轉接,讓商家從「客服救火」轉為「持續知識經營」。"
+    ],
+    media: [
+      { type: "image", src: "../../assets/projects/demo-placeholder-sky.svg", alt: "Demo 示意圖" },
+      { type: "image", src: "../../assets/projects/demo-placeholder-pink.svg", alt: "Demo 示意圖" }
     ],
     links: [
       { label: "查看 GitHub 程式碼", url: "#", icon: "github" },
