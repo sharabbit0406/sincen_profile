@@ -1,5 +1,46 @@
 // ProjectModal.jsx — right-slide fullscreen modal (技術深潛區)
-const { useEffect: useEffectM, useRef: useRefM } = React;
+const { useEffect: useEffectM, useRef: useRefM, useState: useStateM } = React;
+
+const PLACEHOLDER_MEDIA = [
+  { type: "video", placeholder: true },
+  { type: "image", placeholder: true },
+  { type: "image", placeholder: true },
+];
+
+function MediaGallery({ media }) {
+  const items = (media && media.length > 0) ? media : PLACEHOLDER_MEDIA;
+  return (
+    <div className="pmodal__gallery-wrap">
+      <div className="pmodal__gallery">
+        {items.map((item, i) => (
+          <div key={i} className={`pmodal__media-item pmodal__media-item--${item.type}`}>
+            {item.placeholder ? (
+              <div className="pmodal__media-ph">
+                {item.type === "video" ? (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+                  </svg>
+                ) : (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                )}
+                <span>Demo 示意<br/>正在建造中</span>
+              </div>
+            ) : item.type === "video" ? (
+              <video src={item.src} controls playsInline className="pmodal__media-video" />
+            ) : (
+              <img src={item.src} alt={item.alt || "demo"} className="pmodal__media-img" loading="lazy" />
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function ProjectModal({ project, onClose, onPrev, onNext, index, total, onChat }) {
   const scrollRef = useRefM(null);
@@ -69,6 +110,11 @@ function ProjectModal({ project, onClose, onPrev, onNext, index, total, onChat }
               </div>
             )}
           </div>
+
+          <section className="pmodal__section">
+            <h4 className="pmodal__h4">📸 Demo 展示</h4>
+            <MediaGallery media={project.media} />
+          </section>
 
           <section className="pmodal__section">
             <h4 className="pmodal__h4">🎯 痛點與目標</h4>
